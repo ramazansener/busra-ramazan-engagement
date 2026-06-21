@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Ramazan & Büşra 💕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --rose: #e8a0b4;
+      --rose-dark: #c97b8f;
+      --cream: #fdf6f0;
+      --gold: #d4a574;
+      --text: #3d2c2c;
+      --text-light: #7a5c5c;
+      --shadow: rgba(61, 44, 44, 0.15);
+    }
+
+    html, body {
+      height: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+      min-height: -webkit-fill-available;
+      overflow: hidden;
+      font-family: 'Nunito', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    /* ── Particles ── */
+    #particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .particle {
+      position: absolute;
+      font-size: 14px;
+      opacity: 0;
+      animation: floatUp linear infinite;
+    }
+    @keyframes floatUp {
+      0%   { transform: translateY(100vh) translateX(0) rotate(0deg); opacity: 0; }
+      10%  { opacity: 0.7; }
+      50%  { transform: translateY(50vh) translateX(20px) rotate(180deg); }
+      90%  { opacity: 0.5; }
+      100% { transform: translateY(-10vh) translateX(-15px) rotate(360deg); opacity: 0; }
+    }
+
+    /* ── Global keyframes ── */
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50%      { background-position: 100% 50%; }
+    }
+    @keyframes kenBurns {
+      0%   { transform: scale(1) translate(0, 0); }
+      100% { transform: scale(1.12) translate(-2%, -1%); }
+    }
+    @keyframes iconFloat {
+      0%, 100% { transform: translateY(0) rotate(-3deg); }
+      50%      { transform: translateY(-12px) rotate(3deg); }
+    }
+    @keyframes iconPop {
+      from { transform: scale(0) rotate(-20deg); opacity: 0; }
+      to   { transform: scale(1) rotate(0deg); opacity: 1; }
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    @keyframes pulseBtn {
+      0%, 100% { box-shadow: 0 4px 14px rgba(201,123,143,0.4); }
+      50%      { box-shadow: 0 4px 24px rgba(201,123,143,0.7), 0 0 0 4px rgba(232,160,180,0.2); }
+    }
+    @keyframes continuePulse {
+      0%, 100% { transform: scale(1); border-color: var(--rose); }
+      50%      { transform: scale(1.02); border-color: var(--rose-dark); }
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      25%       { transform: scale(1.15); }
+      50%       { transform: scale(1); }
+      75%       { transform: scale(1.08); }
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes flyAcross {
+      0%   { transform: translateX(-120%) translateY(0); }
+      100% { transform: translateX(120vw) translateY(-20px); }
+    }
+    @keyframes cloudDrift {
+      0%, 100% { transform: translateX(0); }
+      50%      { transform: translateX(30px); }
+    }
+    @keyframes sunPulse {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50%      { transform: scale(1.15); opacity: 1; }
+    }
+    @keyframes steamRise {
+      0%   { transform: translateY(0) scale(1); opacity: 0.6; }
+      100% { transform: translateY(-60px) scale(1.5); opacity: 0; }
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; transform: scale(0.8); }
+      50%      { opacity: 1; transform: scale(1.2); }
+    }
+    @keyframes swing {
+      0%, 100% { transform: rotate(-8deg); }
+      50%      { transform: rotate(8deg); }
+    }
+    @keyframes tickTock {
+      0%, 100% { transform: rotate(-12deg); }
+      50%      { transform: rotate(12deg); }
+    }
+    @keyframes carDrive {
+      0%   { transform: translateX(-80px); opacity: 0; }
+      20%  { opacity: 1; }
+      80%  { opacity: 1; }
+      100% { transform: translateX(80px); opacity: 0; }
+    }
+    @keyframes bounceIn {
+      0%   { transform: scale(0.3); opacity: 0; }
+      50%  { transform: scale(1.08); }
+      70%  { transform: scale(0.95); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes choiceSlide {
+      from { opacity: 0; transform: translateX(-24px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes sceneFlash {
+      0%   { opacity: 0.6; }
+      100% { opacity: 0; }
+    }
+    @keyframes introTitleIn {
+      from { opacity: 0; transform: translateY(24px); letter-spacing: 8px; }
+      to   { opacity: 1; transform: translateY(0); letter-spacing: 0; }
+    }
+    @keyframes orbitHeart {
+      0%   { transform: rotate(0deg) translateX(90px) rotate(0deg); }
+      100% { transform: rotate(360deg) translateX(90px) rotate(-360deg); }
+    }
+    @keyframes confettiFall {
+      0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+    }
+    @keyframes dotPop {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.8); }
+      100% { transform: scale(1.4); }
+    }
+    @keyframes dialogueShake {
+      0%, 100% { transform: translateX(0); }
+      25%      { transform: translateX(-2px); }
+      75%      { transform: translateX(2px); }
+    }
+
+    /* ── App shell ── */
+    #app {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ── Progress bar ── */
+    #progress-bar {
+      height: 3px;
+      background: rgba(232,160,180,0.2);
+      flex-shrink: 0;
+    }
+    #progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--rose), var(--gold), var(--rose), var(--gold));
+      background-size: 200% 100%;
+      width: 0%;
+      transition: width 0.6s ease;
+      animation: shimmer 2.5s linear infinite;
+    }
+
+    /* ── Scene area ── */
+    #scene {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .scene-bg {
+      position: absolute;
+      inset: -5%;
+      transition: opacity 1s ease;
+      opacity: 0;
+      z-index: 0;
+      background-size: 200% 200%;
+      animation: gradientShift 8s ease infinite, kenBurns 20s ease-in-out infinite alternate;
+    }
+    .scene-bg.active { opacity: 1; }
+
+    /* Background themes */
+    .bg-intro    { background: linear-gradient(160deg, #1a0a1e, #3d1f3d, #6b3a5c, #3d1f3d); }
+    .bg-may      { background: linear-gradient(160deg, #2d1b3d, #5c3d6b, #8b5e8b, #5c3d6b); }
+    .bg-flight   { background: linear-gradient(160deg, #0d1b2a, #1b3a5c, #4a7fa5, #1b3a5c); }
+    .bg-morning  { background: linear-gradient(160deg, #3d2b1f, #8b6914, #d4a574, #8b6914); }
+    .bg-breakfast{ background: linear-gradient(160deg, #4a2c1a, #8b5a2b, #c49a6c, #8b5a2b); }
+    .bg-coffee1  { background: linear-gradient(160deg, #2c1810, #5c3a2b, #8b5e4a, #5c3a2b); }
+    .bg-evening  { background: linear-gradient(160deg, #1a1028, #3d2b5c, #7b5ea8, #3d2b5c); }
+    .bg-exam     { background: linear-gradient(160deg, #1a2838, #2b4a6b, #5a8ab0, #2b4a6b); }
+    .bg-waiting  { background: linear-gradient(160deg, #1e2830, #3a5060, #6b8fa0, #3a5060); }
+    .bg-coffee2  { background: linear-gradient(160deg, #2a1a28, #5c3a50, #9b6b8a, #5c3a50); }
+    .bg-uni      { background: linear-gradient(160deg, #1a1a3e, #2d2d6b, #4a4a8a, #2d2d6b); }
+    .bg-fener    { background: linear-gradient(160deg, #0a1628, #1a3a6b, #f0c040, #1a3a6b); }
+    .bg-phone    { background: linear-gradient(160deg, #1a1028, #3d2b5c, #6b4a8a, #3d2b5c); }
+    .bg-flowers  { background: linear-gradient(160deg, #3a1028, #8b3050, #e8a0b4, #8b3050); }
+    .bg-distance { background: linear-gradient(160deg, #0d2840, #1b5a7a, #c97b8f, #8b6914); }
+    .bg-surprise { background: linear-gradient(160deg, #2a0820, #8b2060, #e8a0b4, #ffd700); }
+    .bg-final    { background: linear-gradient(160deg, #1a0a20, #4a1a40, #c97b8f, #e8a0b4); }
+
+    /* ── Scene decorations ── */
+    #scene-decor {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .decor-item {
+      position: absolute;
+      font-size: 28px;
+      opacity: 0.85;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+    }
+    .decor-cloud  { animation: cloudDrift 6s ease-in-out infinite; font-size: 40px; opacity: 0.5; }
+    .decor-plane  { top: 18%; animation: flyAcross 14s linear infinite; font-size: 36px; }
+    .decor-sun    { top: 8%; right: 12%; font-size: 52px; animation: sunPulse 3s ease-in-out infinite; }
+    .decor-steam  { animation: steamRise 2.5s ease-out infinite; font-size: 22px; opacity: 0.5; }
+    .decor-star   { font-size: 14px; animation: twinkle 2s ease-in-out infinite; }
+    .decor-swing  { animation: swing 3s ease-in-out infinite; transform-origin: top center; }
+    .decor-tick   { animation: tickTock 1.2s ease-in-out infinite; transform-origin: center bottom; }
+    .decor-car    { bottom: 28%; animation: carDrive 5s ease-in-out infinite; font-size: 32px; }
+    .decor-float  { animation: iconFloat 4s ease-in-out infinite; }
+    .decor-petal  { animation: floatUp 10s linear infinite; font-size: 18px; opacity: 0.6; }
+    .decor-flower { animation: iconFloat 3.5s ease-in-out infinite; font-size: 32px; }
+    .decor-flower-rain { animation: confettiFall 6s linear infinite; font-size: 24px; opacity: 0.7; }
+    .decor-heart-pulse { animation: heartbeat 1.4s ease-in-out infinite; font-size: 30px; }
+    .decor-phone-ring { animation: swing 0.8s ease-in-out infinite; transform-origin: center; font-size: 40px; }
+
+    #scene-flash {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      background: white;
+      opacity: 0;
+      pointer-events: none;
+    }
+    #scene-flash.flash { animation: sceneFlash 0.5s ease-out forwards; }
+
+    /* ── Scene content ── */
+    #scene-content {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px 20px 0;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    #scene-content.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Scene icon ── */
+    #scene-icon {
+      text-align: center;
+      font-size: 64px;
+      margin-bottom: 12px;
+      animation: iconPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both,
+                 iconFloat 3s ease-in-out 0.6s infinite;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    }
+
+    /* ── Date badge ── */
+    #date-badge {
+      display: inline-block;
+      align-self: center;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 10px;
+      animation: slideDown 0.5s ease 0.2s both;
+    }
+
+    /* ── Chapter title ── */
+    #chapter-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      margin-bottom: 16px;
+      line-height: 1.3;
+      animation: slideDown 0.6s ease 0.35s both;
+    }
+
+    /* ── Dialogue box ── */
+    #dialogue-box {
+      background: rgba(253, 246, 240, 0.97);
+      border-radius: 20px 20px 0 0;
+      padding: 22px 22px 28px;
+      box-shadow: 0 -8px 32px var(--shadow);
+      min-height: 160px;
+      position: relative;
+      animation: slideUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+      transition: transform 0.2s;
+    }
+    #dialogue-box.line-change {
+      animation: dialogueShake 0.3s ease;
+    }
+    #dialogue-box::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 36px;
+      height: 4px;
+      background: var(--rose);
+      border-radius: 2px;
+      opacity: 0.5;
+    }
+
+    #speaker {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--rose-dark);
+      margin-bottom: 8px;
+      margin-top: 8px;
+      animation: fadeIn 0.4s ease both;
+    }
+
+    #dialogue-text {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      min-height: 72px;
+    }
+    #dialogue-text .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background: var(--rose-dark);
+      margin-left: 2px;
+      vertical-align: text-bottom;
+      animation: blink 0.8s step-end infinite;
+    }
+
+    /* ── Choice buttons ── */
+    #choices {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .choice-btn {
+      background: linear-gradient(135deg, var(--rose), var(--rose-dark));
+      background-size: 200% 200%;
+      color: #fff;
+      border: none;
+      border-radius: 14px;
+      padding: 13px 18px;
+      min-height: 48px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.15s;
+      box-shadow: 0 4px 14px rgba(201,123,143,0.4);
+      text-align: left;
+      animation: choiceSlide 0.45s ease both, pulseBtn 2s ease-in-out infinite;
+      touch-action: manipulation;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .choice-btn:nth-child(2) { animation-delay: 0.1s, 0.1s; }
+    .choice-btn:active { transform: scale(0.97); }
+
+    /* ── Continue button ── */
+    #continue-btn {
+      display: none;
+      width: 100%;
+      margin-top: 14px;
+      background: transparent;
+      border: 2px solid var(--rose);
+      color: var(--rose-dark);
+      border-radius: 14px;
+      padding: 12px;
+      min-height: 48px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      transition: background 0.2s, color 0.2s;
+      touch-action: manipulation;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    #continue-btn.show {
+      display: block;
+      animation: bounceIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both,
+                 continuePulse 2s ease-in-out 0.5s infinite;
+    }
+    #continue-btn:active { background: var(--rose); color: #fff; transform: scale(0.97); }
+
+    /* ── Intro screen ── */
+    #intro-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: linear-gradient(160deg, #1a0a1e, #3d1f3d, #6b3a5c, #3d1f3d);
+      background-size: 200% 200%;
+      animation: gradientShift 10s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      text-align: center;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      overflow: hidden;
+    }
+    .intro-orbit {
+      position: absolute;
+      font-size: 22px;
+      animation: orbitHeart 8s linear infinite;
+      opacity: 0.7;
+      pointer-events: none;
+    }
+    .intro-orbit.o2 { animation-duration: 11s; animation-direction: reverse; font-size: 16px; }
+    .intro-orbit.o3 { animation-duration: 14s; font-size: 18px; }
+    #intro-screen.hide {
+      opacity: 0;
+      transform: scale(1.05);
+      pointer-events: none;
+    }
+
+    .intro-hearts {
+      font-size: 48px;
+      margin-bottom: 24px;
+      animation: heartbeat 1.4s ease-in-out infinite;
+      position: relative;
+      z-index: 2;
+    }
+
+    #intro-screen h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 16px rgba(232,160,180,0.5);
+      animation: introTitleIn 1s ease 0.3s both;
+      position: relative;
+      z-index: 2;
+    }
+    #intro-screen .subtitle {
+      font-size: 15px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 40px;
+      font-style: italic;
+      font-family: 'Playfair Display', serif;
+      animation: fadeIn 1s ease 0.8s both;
+      position: relative;
+      z-index: 2;
+    }
+    #start-btn {
+      background: linear-gradient(135deg, var(--rose), var(--rose-dark), var(--rose));
+      background-size: 200% 200%;
+      animation: gradientShift 3s ease infinite, bounceIn 0.8s ease 1.2s both;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 16px 48px;
+      min-height: 52px;
+      min-width: 200px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(201,123,143,0.5);
+      letter-spacing: 1px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      z-index: 10;
+      touch-action: manipulation;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    #start-btn:active {
+      transform: scale(0.96);
+      box-shadow: 0 4px 12px rgba(201,123,143,0.4);
+    }
+
+    /* ── End screen ── */
+    #end-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: linear-gradient(160deg, #1a0a20 0%, #4a1a40 40%, #c97b8f 80%, #e8a0b4 100%);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+    #end-screen.show {
+      display: flex;
+      opacity: 1;
+      animation: gradientShift 8s ease infinite;
+      background-size: 200% 200%;
+    }
+
+    #end-confetti {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .confetti-piece {
+      position: absolute;
+      top: -20px;
+      font-size: 20px;
+      animation: confettiFall linear forwards;
+    }
+
+    #end-screen .big-heart {
+      font-size: 72px;
+      margin-bottom: 20px;
+      animation: heartbeat 1.4s ease-in-out infinite, bounceIn 0.8s ease both;
+    }
+    #end-screen h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.4;
+      animation: slideDown 0.7s ease 0.3s both;
+    }
+    #end-screen p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
+      max-width: 320px;
+      margin-bottom: 32px;
+      animation: fadeIn 0.8s ease 0.6s both;
+    }
+    #replay-btn { animation: bounceIn 0.6s ease 0.9s both; }
+    #replay-btn {
+      background: rgba(255,255,255,0.2);
+      border: 2px solid rgba(255,255,255,0.6);
+      color: #fff;
+      border-radius: 50px;
+      padding: 12px 36px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+    }
+
+    /* ── Chapter dots ── */
+    #chapter-dots {
+      display: flex;
+      justify-content: flex-start;
+      gap: 5px;
+      padding: 10px 16px 14px;
+      flex-shrink: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    #chapter-dots::-webkit-scrollbar { display: none; }
+    .dot {
+      width: 5px;
+      height: 5px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: rgba(232,160,180,0.3);
+      transition: background 0.3s, transform 0.3s;
+    }
+    .dot.active {
+      background: var(--rose-dark);
+      animation: dotPop 0.4s ease forwards;
+    }
+    .dot.done { background: var(--rose); }
+
+    /* ── Location tag ── */
+    #location-tag {
+      display: none;
+      align-self: center;
+      background: rgba(212,165,116,0.25);
+      border: 1px solid rgba(212,165,116,0.5);
+      border-radius: 12px;
+      padding: 3px 12px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    #location-tag.show {
+      display: inline-block;
+      animation: bounceIn 0.5s ease 0.45s both;
+    }
+
+    /* tap hint */
+    .tap-hint {
+      text-align: center;
+      font-size: 11px;
+      color: var(--text-light);
+      margin-top: 8px;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+<div id="particles"></div>
+
+<!-- Intro -->
+<div id="intro-screen">
+  <div class="intro-orbit">💕</div>
+  <div class="intro-orbit o2">✨</div>
+  <div class="intro-orbit o3">🌸</div>
+  <div class="intro-hearts">💕</div>
+  <h1>Ramazan & Büşra</h1>
+  <p class="subtitle">Büşra'ya — bizim hikayemiz...</p>
+  <button type="button" id="start-btn">Hikayeyi Başlat ✨</button>
+</div>
+
+<!-- End -->
+<div id="end-screen">
+  <div id="end-confetti"></div>
+  <div class="big-heart">💖</div>
+  <h2>Bu hikaye<br>devam ediyor...</h2>
+  <p>28 Mayıs'ta yazdığım o ilk satırdan, ofisine bıraktığım çiçeğe kadar her şey seninle anlam kazandı. Bu hikaye burada bitmiyor — seninle devam edecek. Seni çok seviyorum Büşra. 💕</p>
+  <button type="button" id="replay-btn">Tekrar Oku 🔄</button>
+</div>
+
+<!-- Main app -->
+<div id="app">
+  <div id="progress-bar"><div id="progress-fill"></div></div>
+
+  <div id="scene">
+    <!-- backgrounds injected by JS -->
+    <div id="scene-decor"></div>
+    <div id="scene-flash"></div>
+    <div id="scene-content">
+      <div id="scene-icon"></div>
+      <div id="date-badge"></div>
+      <div id="location-tag"></div>
+      <div id="chapter-title"></div>
+    </div>
+  </div>
+
+  <div id="dialogue-box">
+    <div id="speaker"></div>
+    <div id="dialogue-text"></div>
+    <div id="choices"></div>
+    <button type="button" id="continue-btn">Devam Et →</button>
+    <p class="tap-hint" id="tap-hint" style="display:none">Metne dokunarak hızlandır</p>
+  </div>
+
+  <div id="chapter-dots"></div>
+</div>
+
+<script>
+const SCENES = [
+  {
+    bg: 'bg-may', icon: '💬', decor: 'message',
+    date: '28 Mayıs 2026', location: '',
+    title: 'Her şey bir mesajla başladı',
+    speaker: 'Ramazan',
+    lines: [
+      'Cesaretimi toplayıp sana yazdım. Sade bir selam, bir merhaba...',
+      'Bayram sohbetleri arasında konuşmalar uzadı. Gece iyi geceler derken içimde garip bir his vardı — sanki bu, sıradan bir sohbet değildi.',
+      'O gün henüz bilmiyordum. Ama kalbim bir şeylerin farkına varmış gibiydi.'
+    ],
+    choices: null
+  },
+  {
+    bg: 'bg-uni', icon: '🎓', decor: 'uni',
+    date: '29 Mayıs', location: 'Fırat Üniversitesi',
+    title: 'Aynı Kampüsten Geçmişiz',
+    speaker: 'Ramazan',
+    lines: [
+      'Kahve konuşurken sen Türk kahvesini sevdiğini söyledin. Ben de severim — küçük bir ortaklık gibi geldi.',
+      'Sonra mezun olduğum okulu sordun. Fırat dedim. Sen de oradan mezunsun.',
+      'O an garip bir sıcaklık hissettim. Yıllar önce aynı yerlerden geçmiş olabilmek... Bana çok şey ifade etti.'
+    ],
+    choices: [
+      { text: '☕ Keşke o günlerden beri tanısaydık', response: 'Belki de tam zamanıydı. Şimdi tanışıyor olmamız belki de en doğrusuydu.' }
+    ]
+  },
+  {
+    bg: 'bg-fener', icon: '💛💙', decor: 'fener',
+    date: '30 Mayıs', location: '',
+    title: 'İkimiz de Fenerbahçeliyiz',
+    speaker: 'Ramazan',
+    lines: [
+      'Takımını sordum. Fenerbahçe dedin.',
+      'Ben de Fenerbahçeliyim. İçimden gerçekten sevinç geçti — saçma gelebilir ama o an biraz daha yakın hissettim.',
+      'Beraber maç izleriz belki diye hayal ettim. Sen de sıcak karşıladın. O küçük detay bile günümü güzelleştirdi.'
+    ],
+    choices: null
+  },
+  {
+    bg: 'bg-phone', icon: '📞', decor: 'phone',
+    date: '31 Mayıs', location: '',
+    title: 'Sesini Duymak',
+    speaker: 'Ramazan',
+    lines: [
+      'O gün seni aradım. Bir saat konuştuk — telefon kapandıktan sonra bile gülümsedim.',
+      'Sesin, gülüşün, konuşma tarzın... Yazıdan farklıydı. Daha gerçek, daha yakın.',
+      '11 Haziran\'ı konuştuk. Takvimime baktım, uygunum dedim. Gaziantep\'e gideceğim gün artık belliydi. Heyecanım her gece biraz daha büyüdü.'
+    ],
+    choices: null
+  },
+  {
+    bg: 'bg-flight', icon: '✈️', decor: 'flight',
+    date: '10 Haziran', location: 'Antalya → Gaziantep',
+    title: 'Heyecanlı Uçuş',
+    speaker: 'Ramazan',
+    lines: [
+      'Havalimanına gittiğimde fark ettim — daha önce hiç bu kadar heyecanlanmamıştım.',
+      'Uçak indiğinde Gaziantep\'in havası bile farklı geldi. İçim garip bir duygusallıkla doldu.',
+      'O mutluluk uzun zamandan sonra mı gelmişti, yoksa senin yüzünü görecek olmam mıydı — ayırt edemedim. Belki de ikisi birdendi.'
+    ],
+    choices: null
+  },
+  {
+    bg: 'bg-morning', icon: '🌅', decor: 'morning',
+    date: '11 Haziran — Sabah', location: 'Gaziantep',
+    title: 'İlk Buluşma',
+    speaker: 'Ramazan',
+    lines: [
+      'Seni evinden aldım. Seni gördüğüm an nefesim kesildi — hayal ettiğimden de güzeldin.',
+      'Udma\'a rezervasyon yaptırmıştım. Acele etme diye söyledim; gülümsedin. O gülüşün hâlâ aklımda.',
+      'O sabah güneş bile bizim için parlıyordu sanki. Her şey yerli yerindeydi.'
+    ],
+    choices: [
+      { text: '💛 O anı bir daha yaşamak isterdim', response: 'Ben de. Ve biliyorum ki o sabah, hayatımda dönüm noktalarından biriydi.' }
+    ]
+  },
+  {
+    bg: 'bg-breakfast', icon: '🍳', decor: 'breakfast',
+    date: '11 Haziran — Kahvaltı', location: '📍 Udma',
+    title: 'Udma\'da Kahvaltı',
+    speaker: 'Ramazan',
+    lines: [
+      'Gaziantep\'in meşhur kahvaltı mekanı Udma\'daydık.',
+      'Masada çaylar, tabaklar, sohbet... Ama asıl güzel olan senin yanımda olmandı.',
+      'O sabah sadece kahvaltı etmedik. İlk gerçek anımızı birlikte yaşadık.'
+    ],
+    choices: null
+  },
+  {
+    bg: 'bg-coffee1', icon: '☕', decor: 'coffee',
+    date: '11 Haziran — Öğleden Sonra', location: '📍 Helmes Chocolate',
+    title: 'Helmes\'te Kahve',
+    speaker: 'Ramazan',
+    lines: [
+      'Kahvaltının ardından Helmes Chocolate\'a geçtik.',
+      'Sıcak kahve, hafif bir tatlı, seninle uzayan sohbet... Zaman nasıl geçti anlamadım.',
+      'İkimizin de yüzünde gülümseme vardı. İçimdeki his doğruydu — bunu o gün kesin bilmiştim.'
+    ],
+    choices: [
+      { text: '☕ O kahveyi asla unutamam', response: 'Ben de. Helmes\'teki o öğleden sonra, kalbime kazınan anlardan biri oldu.' }
+    ]
+  },
+  {
+    bg: 'bg-evening', icon: '🌙', decor: 'evening',
+    date: '11 Haziran — Gece', location: 'Gaziantep',
+    title: 'İlk Günün Sonu',
+    speaker: 'Ramazan',
+    lines: [
+      'Seni evine bıraktım. Arabama dönerken içim huzurla doluydu.',
+      'Akşam sana yazdım. Senden geçen bir enerji olduğunu anlatmaya çalıştım — sıcakkanlı, doğal, zorlanmadan konuşabildiğim biri.',
+      'Zamanın nasıl geçtiğini anlamamıştım. Ve biliyordum ki bu, sadece başlangıçtı.'
+    ],
+    choices: null
+  },
+  {
+    bg: 'bg-exam', icon: '📚', decor: 'exam',
+    date: '13 Haziran — Cumartesi', location: '📍 Mimarlık Fakültesi',
+    title: 'Sınav Günü',
+    speaker: 'Ramazan',
+    lines: [
+      'Cumartesi yine seni aldım. O gün sınavın vardı — seni Mimarlık Fakültesi\'ne götürdüm.',
+      'Seni bıraktım, başarılar diledim. İçimde seninle gurur duyuyordum; yanında olmak istedim.',
+      'Sınav süresince dışarıda bekledim. Bir saat... O anı çok farklı hissettim. Sadece beklemek değildi — senin için orada olmak, çıkacağın kapıyı gözlemek... Kalbimde tarif edemediğim bir his vardı.'
+    ],
+    choices: null
+  },
+  {
+    bg: 'bg-coffee2', icon: '🌸', decor: 'petals',
+    date: '13 Haziran — Öğleden Sonra', location: '📍 Vlove',
+    title: 'Vlove\'da İkinci Kahvemiz',
+    speaker: 'Ramazan',
+    lines: [
+      'Sınavdan çıkınca Vlove\'a gittik. Yorgunluğun vardı ama gözlerinde hâlâ o ışık vardı.',
+      'İkinci kahvemiz, ikinci güzel anımız... Her konuşma bizi birbirimize biraz daha yaklaştırıyordu.',
+      'Sınavın nasıl geçtiğini anlattın. O an yanında olmanın ne kadar değerli olduğunu bir kez daha anladım.'
+    ],
+    choices: [
+      { text: '💪 Yanında olmak istedim — ve oldum', response: 'Evet. Ve o gün bunu hissetmek, bana her şeye değermiş gibi geldi.' }
+    ]
+  },
+  {
+    bg: 'bg-flowers', icon: '🌹', decor: 'flowers1',
+    date: '13 Haziran — Akşam', location: 'Gaziantep',
+    title: 'İlk Çiçeğin',
+    speaker: 'Ramazan',
+    lines: [
+      'O gün sana bir çiçek verdim. Küçük bir jest gibi görünse de benim için çok şey ifade ediyordu.',
+      'Akşam merak ettim — evde sordular mı diye. Sakladığını, direkt odana geçtiğini söyledin.',
+      'Gülümsedim. O çiçek senin odanda kaldı belki, ama bana bıraktığı his hâlâ kalbimde.'
+    ],
+    choices: null
+  },
+  {
+    bg: 'bg-distance', icon: '📱', decor: 'distance',
+    date: 'Haziran', location: 'Antalya ↔ Gaziantep',
+    title: 'Mesafeler Arasında',
+    speaker: 'Ramazan',
+    lines: [
+      'Gaziantep\'ten ayrıldım. Antalya\'ya döndüm ama konuşmalar bitmedi — aksine her gün biraz daha derinleşti.',
+      'Sana samimi, sıcak ve cana yakın biri olduğunu söylemiştim. Sen de aynı şeyi hissettiğini söyledin.',
+      'İkimiz de enerjimizin tuttuğunu düşünüyorduk. Şehirler arasında mesafe vardı — ama aramızdaki bağ her gece biraz daha güçleniyordu.'
+    ],
+    choices: null
+  },
+  {
+    bg: 'bg-coffee1', icon: '☕', decor: 'coffee',
+    date: '15 Haziran', location: 'Antalya',
+    title: 'Kahve Özlemi',
+    speaker: 'Ramazan',
+    lines: [
+      'Antalya\'da kahve içerken sana fotoğraf attım. Manzara güzeldi ama eksik bir şey vardı.',
+      'Sana yazdım: artık sen olmadan içilen kahveler tad vermemeye başladı.',
+      'Şaka sandın belki. Ama ben ciddiydim. Seni özlediğimi o gün bir kez daha fark ettim.'
+    ],
+    choices: [
+      { text: '💕 Seni bekliyordum — ve beklemeye devam edeceğim', response: 'Evet. Çünkü sen, beklemeye değer biriydin. Hâlâ öylesin.' }
+    ]
+  },
+  {
+    bg: 'bg-surprise', icon: '💐', decor: 'flowers2',
+    date: '19 Haziran', location: '📍 Ofis — Gaziantep',
+    title: 'Sürpriz Çiçek',
+    speaker: 'Ramazan',
+    lines: [
+      'Sana bir sürpriz hazırladım. Ofiste çalışıyordun — haberin yoktu.',
+      'Çiçekler geldiğinde mesaj attın. Sesindeki o mutluluk... İçim doldu.',
+      'Çiçekleri beğendiğini söyledin ama kartı daha çok sevdiğini de ekledin. Karttaki her kelime kalbimden gelmişti. Çünkü sana olan sevgimden — içten, gerçek, sade.'
+    ],
+    choices: [
+      { text: '🌹 Bu çiçekler sadece bir başlangıç', response: 'Evet Büşra. Çünkü sana söylemek istediğim daha çok şey var. Ve hepsini zamanla, seninle birlikte yaşamak istiyorum.' }
+    ]
+  }
+];
+
+// ── State ──
+let currentScene = 0;
+let currentLine = 0;
+let typing = false;
+let typeTimer = null;
+let fullText = '';
+
+// ── DOM refs ──
+const introScreen  = document.getElementById('intro-screen');
+const endScreen    = document.getElementById('end-screen');
+const sceneContent = document.getElementById('scene-content');
+const sceneIcon    = document.getElementById('scene-icon');
+const dateBadge    = document.getElementById('date-badge');
+const locationTag  = document.getElementById('location-tag');
+const chapterTitle = document.getElementById('chapter-title');
+const speaker      = document.getElementById('speaker');
+const dialogueText = document.getElementById('dialogue-text');
+const choices      = document.getElementById('choices');
+const continueBtn  = document.getElementById('continue-btn');
+const tapHint      = document.getElementById('tap-hint');
+const progressFill = document.getElementById('progress-fill');
+const chapterDots  = document.getElementById('chapter-dots');
+const sceneEl      = document.getElementById('scene');
+const sceneDecor   = document.getElementById('scene-decor');
+const sceneFlash   = document.getElementById('scene-flash');
+const dialogueBox  = document.getElementById('dialogue-box');
+
+// ── Scene decorations config ──
+const DECORATIONS = {
+  message: () => [
+    { cls: 'decor-float', emoji: '📱', top: '20%', left: '10%' },
+    { cls: 'decor-float', emoji: '💌', top: '35%', right: '8%', style: 'animation-delay:1s' },
+    { cls: 'decor-petal', emoji: '✨', left: '20%', style: 'animation-delay:0s' },
+    { cls: 'decor-petal', emoji: '✨', left: '60%', style: 'animation-delay:3s' },
+    { cls: 'decor-petal', emoji: '💕', left: '80%', style: 'animation-delay:5s' },
+  ],
+  flight: () => [
+    { cls: 'decor-cloud', emoji: '☁️', top: '12%', left: '5%' },
+    { cls: 'decor-cloud', emoji: '☁️', top: '22%', right: '10%', style: 'animation-delay:2s' },
+    { cls: 'decor-plane', emoji: '✈️', top: '18%', left: '0' },
+    { cls: 'decor-star', emoji: '⭐', top: '8%', left: '30%', style: 'animation-delay:0.5s' },
+    { cls: 'decor-star', emoji: '⭐', top: '15%', right: '25%', style: 'animation-delay:1.2s' },
+  ],
+  morning: () => [
+    { cls: 'decor-sun', emoji: '☀️' },
+    { cls: 'decor-cloud', emoji: '☁️', top: '20%', left: '8%', style: 'opacity:0.4' },
+    { cls: 'decor-float', emoji: '🌅', top: '40%', left: '15%', style: 'font-size:36px;animation-delay:0.5s' },
+  ],
+  breakfast: () => [
+    { cls: 'decor-float', emoji: '🍳', top: '15%', left: '12%', style: 'animation-delay:0s' },
+    { cls: 'decor-float', emoji: '🫖', top: '25%', right: '10%', style: 'animation-delay:0.8s' },
+    { cls: 'decor-steam', emoji: '♨️', top: '30%', left: '45%', style: 'animation-delay:0s' },
+    { cls: 'decor-steam', emoji: '♨️', top: '32%', left: '50%', style: 'animation-delay:0.8s' },
+    { cls: 'decor-swing', emoji: '🥐', top: '18%', right: '20%', style: 'font-size:32px' },
+  ],
+  coffee: () => [
+    { cls: 'decor-steam', emoji: '☁️', top: '20%', left: '40%', style: 'animation-delay:0s;font-size:28px' },
+    { cls: 'decor-steam', emoji: '☁️', top: '22%', left: '48%', style: 'animation-delay:1s;font-size:24px' },
+    { cls: 'decor-float', emoji: '☕', top: '28%', left: '42%', style: 'font-size:40px' },
+    { cls: 'decor-float', emoji: '🍫', top: '18%', right: '15%', style: 'animation-delay:1.2s' },
+  ],
+  evening: () => [
+    { cls: 'decor-star', emoji: '⭐', top: '10%', left: '15%', style: 'animation-delay:0s' },
+    { cls: 'decor-star', emoji: '✨', top: '8%', left: '40%', style: 'animation-delay:0.7s' },
+    { cls: 'decor-star', emoji: '⭐', top: '14%', right: '20%', style: 'animation-delay:1.4s' },
+    { cls: 'decor-star', emoji: '✨', top: '20%', right: '35%', style: 'animation-delay:0.3s' },
+    { cls: 'decor-star', emoji: '⭐', top: '6%', left: '70%', style: 'animation-delay:1.8s' },
+    { cls: 'decor-float', emoji: '🌙', top: '12%', right: '8%', style: 'font-size:44px' },
+  ],
+  exam: () => [
+    { cls: 'decor-float', emoji: '📐', top: '15%', left: '10%', style: 'animation-delay:0s' },
+    { cls: 'decor-float', emoji: '📏', top: '22%', right: '12%', style: 'animation-delay:0.6s' },
+    { cls: 'decor-swing', emoji: '🏛️', top: '10%', left: '40%', style: 'font-size:38px' },
+  ],
+  waiting: () => [
+    { cls: 'decor-tick', emoji: '⏳', top: '15%', left: '42%', style: 'font-size:48px' },
+    { cls: 'decor-float', emoji: '💭', top: '28%', right: '15%', style: 'animation-delay:0.5s' },
+    { cls: 'decor-petal', emoji: '🍃', left: '30%', style: 'animation-delay:1s' },
+    { cls: 'decor-petal', emoji: '🍃', left: '70%', style: 'animation-delay:4s' },
+  ],
+  petals: () => [
+    { cls: 'decor-petal', emoji: '🌸', left: '10%', style: 'animation-delay:0s' },
+    { cls: 'decor-petal', emoji: '🌺', left: '35%', style: 'animation-delay:2s' },
+    { cls: 'decor-petal', emoji: '🌸', left: '55%', style: 'animation-delay:4s' },
+    { cls: 'decor-petal', emoji: '💮', left: '75%', style: 'animation-delay:6s' },
+    { cls: 'decor-petal', emoji: '🌸', left: '90%', style: 'animation-delay:1s' },
+    { cls: 'decor-float', emoji: '☕', top: '20%', left: '45%', style: 'font-size:36px' },
+  ],
+  car: () => [
+    { cls: 'decor-car', emoji: '🚗', left: '30%' },
+    { cls: 'decor-star', emoji: '⭐', top: '10%', left: '20%', style: 'animation-delay:0s' },
+    { cls: 'decor-star', emoji: '✨', top: '8%', right: '25%', style: 'animation-delay:1s' },
+    { cls: 'decor-float', emoji: '🌆', top: '15%', left: '50%', style: 'font-size:40px;animation-delay:0.3s' },
+  ],
+  uni: () => [
+    { cls: 'decor-float', emoji: '🎓', top: '12%', left: '15%', style: 'font-size:44px' },
+    { cls: 'decor-float', emoji: '📚', top: '22%', right: '12%', style: 'animation-delay:0.8s' },
+    { cls: 'decor-petal', emoji: '✨', left: '25%', style: 'animation-delay:0s' },
+    { cls: 'decor-petal', emoji: '✨', left: '65%', style: 'animation-delay:3s' },
+  ],
+  fener: () => [
+    { cls: 'decor-float', emoji: '💛', top: '15%', left: '20%', style: 'font-size:40px;animation-delay:0s' },
+    { cls: 'decor-float', emoji: '💙', top: '18%', right: '20%', style: 'font-size:40px;animation-delay:0.5s' },
+    { cls: 'decor-swing', emoji: '⚽', top: '28%', left: '45%', style: 'font-size:36px' },
+    { cls: 'decor-star', emoji: '⭐', top: '8%', left: '50%', style: 'animation-delay:1s' },
+  ],
+  phone: () => [
+    { cls: 'decor-phone-ring', emoji: '📞', top: '20%', left: '40%' },
+    { cls: 'decor-heart-pulse', emoji: '💕', top: '35%', left: '20%', style: 'animation-delay:0.3s' },
+    { cls: 'decor-heart-pulse', emoji: '💕', top: '30%', right: '18%', style: 'animation-delay:0.8s' },
+    { cls: 'decor-petal', emoji: '✨', left: '40%', style: 'animation-delay:1s' },
+  ],
+  flowers1: () => [
+    { cls: 'decor-flower', emoji: '🌹', top: '12%', left: '15%' },
+    { cls: 'decor-flower', emoji: '🌷', top: '20%', right: '12%', style: 'animation-delay:0.6s' },
+    { cls: 'decor-flower-rain', emoji: '🌸', left: '10%', style: 'animation-delay:0s' },
+    { cls: 'decor-flower-rain', emoji: '🌺', left: '50%', style: 'animation-delay:2s' },
+    { cls: 'decor-flower-rain', emoji: '🌸', left: '80%', style: 'animation-delay:4s' },
+  ],
+  flowers2: () => [
+    { cls: 'decor-flower-rain', emoji: '💐', left: '15%', style: 'animation-delay:0s;font-size:28px' },
+    { cls: 'decor-flower-rain', emoji: '🌹', left: '40%', style: 'animation-delay:1.5s' },
+    { cls: 'decor-flower-rain', emoji: '🌸', left: '65%', style: 'animation-delay:3s' },
+    { cls: 'decor-flower-rain', emoji: '💮', left: '85%', style: 'animation-delay:0.8s' },
+    { cls: 'decor-heart-pulse', emoji: '💖', top: '18%', left: '42%', style: 'font-size:52px' },
+    { cls: 'decor-float', emoji: '💌', top: '30%', right: '15%', style: 'animation-delay:0.5s' },
+  ],
+  distance: () => [
+    { cls: 'decor-float', emoji: '📱', top: '15%', left: '12%', style: 'font-size:36px' },
+    { cls: 'decor-float', emoji: '🌴', top: '22%', left: '8%', style: 'animation-delay:0.5s' },
+    { cls: 'decor-float', emoji: '🏙️', top: '18%', right: '10%', style: 'animation-delay:1s' },
+    { cls: 'decor-heart-pulse', emoji: '💕', top: '35%', left: '45%', style: 'font-size:40px' },
+    { cls: 'decor-petal', emoji: '✨', left: '30%', style: 'animation-delay:0s' },
+    { cls: 'decor-petal', emoji: '✨', left: '70%', style: 'animation-delay:2s' },
+  ],
+};
+
+function buildDecor(type) {
+  sceneDecor.innerHTML = '';
+  const items = DECORATIONS[type];
+  if (!items) return;
+  items().forEach(d => {
+    const el = document.createElement('div');
+    el.className = 'decor-item ' + d.cls;
+    el.textContent = d.emoji;
+    if (d.top) el.style.top = d.top;
+    if (d.left) el.style.left = d.left;
+    if (d.right) el.style.right = d.right;
+    if (d.bottom) el.style.bottom = d.bottom;
+    if (d.style) {
+      d.style.split(';').forEach(rule => {
+        const [prop, val] = rule.split(':').map(s => s.trim());
+        if (prop && val) el.style.setProperty(prop, val);
+      });
+    }
+    sceneDecor.appendChild(el);
+  });
+}
+
+function triggerFlash() {
+  sceneFlash.classList.remove('flash');
+  void sceneFlash.offsetWidth;
+  sceneFlash.classList.add('flash');
+}
+
+function resetIconAnim() {
+  sceneIcon.style.animation = 'none';
+  void sceneIcon.offsetWidth;
+  sceneIcon.style.animation = '';
+}
+
+function shakeDialogue() {
+  dialogueBox.classList.remove('line-change');
+  void dialogueBox.offsetWidth;
+  dialogueBox.classList.add('line-change');
+}
+
+function spawnConfetti() {
+  const container = document.getElementById('end-confetti');
+  container.innerHTML = '';
+  const emojis = ['💕','💖','✨','🌸','⭐','💗','🌺','💫'];
+  for (let i = 0; i < 30; i++) {
+    const c = document.createElement('div');
+    c.className = 'confetti-piece';
+    c.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    c.style.left = Math.random() * 100 + '%';
+    c.style.animationDuration = (3 + Math.random() * 4) + 's';
+    c.style.animationDelay = (Math.random() * 2) + 's';
+    c.style.fontSize = (14 + Math.random() * 18) + 'px';
+    container.appendChild(c);
+  }
+}
+
+// ── Init backgrounds ──
+const bgClasses = [...new Set(SCENES.map(s => s.bg))];
+bgClasses.forEach(cls => {
+  const div = document.createElement('div');
+  div.className = `scene-bg ${cls}`;
+  div.id = `bg-${cls}`;
+  sceneEl.insertBefore(div, sceneContent);
+});
+
+// ── Init dots ──
+SCENES.forEach((_, i) => {
+  const dot = document.createElement('div');
+  dot.className = 'dot';
+  dot.id = `dot-${i}`;
+  chapterDots.appendChild(dot);
+});
+
+// ── Particles ──
+const hearts = ['💕','✨','🌸','💖','⭐','🌙','💗','🌺'];
+const particlesEl = document.getElementById('particles');
+for (let i = 0; i < 28; i++) {
+  const p = document.createElement('div');
+  p.className = 'particle';
+  p.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+  p.style.left = Math.random() * 100 + '%';
+  p.style.animationDuration = (8 + Math.random() * 12) + 's';
+  p.style.animationDelay = (Math.random() * 10) + 's';
+  p.style.fontSize = (10 + Math.random() * 10) + 'px';
+  particlesEl.appendChild(p);
+}
+
+// ── Typewriter ──
+function typeText(text, cb) {
+  typing = true;
+  fullText = text;
+  dialogueText.innerHTML = '';
+  tapHint.style.display = 'block';
+  let i = 0;
+  clearInterval(typeTimer);
+  typeTimer = setInterval(() => {
+    const partial = text.slice(0, i + 1);
+    dialogueText.innerHTML = partial + '<span class="cursor"></span>';
+    i++;
+    if (i >= text.length) {
+      clearInterval(typeTimer);
+      typing = false;
+      dialogueText.textContent = text;
+      tapHint.style.display = 'none';
+      if (cb) cb();
+    }
+  }, 32);
+}
+
+function skipType() {
+  if (!typing) return;
+  clearInterval(typeTimer);
+  typing = false;
+  dialogueText.textContent = fullText;
+  tapHint.style.display = 'none';
+  showContinueOrChoices();
+}
+
+dialogueText.addEventListener('click', skipType);
+
+// ── Scene loader ──
+function loadScene(idx) {
+  const s = SCENES[idx];
+  currentLine = 0;
+
+  triggerFlash();
+
+  // bg
+  document.querySelectorAll('.scene-bg').forEach(b => b.classList.remove('active'));
+  const bgEl = document.getElementById('bg-' + s.bg);
+  if (bgEl) bgEl.classList.add('active');
+
+  // decor
+  buildDecor(s.decor || 'message');
+
+  // progress
+  progressFill.style.width = ((idx / SCENES.length) * 100) + '%';
+
+  // dots
+  document.querySelectorAll('.dot').forEach((d, i) => {
+    d.className = 'dot' + (i === idx ? ' active' : i < idx ? ' done' : '');
+  });
+  const activeDot = document.getElementById(`dot-${idx}`);
+  if (activeDot) activeDot.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+
+  // content
+  sceneContent.classList.remove('visible');
+  setTimeout(() => {
+    resetIconAnim();
+    sceneIcon.textContent = s.icon;
+    dateBadge.textContent = s.date;
+    chapterTitle.textContent = s.title;
+
+    if (s.location) {
+      locationTag.textContent = s.location;
+      locationTag.classList.add('show');
+    } else {
+      locationTag.classList.remove('show');
+    }
+
+    speaker.textContent = s.speaker;
+    choices.innerHTML = '';
+    continueBtn.classList.remove('show');
+
+    sceneContent.classList.add('visible');
+    showLine();
+  }, 300);
+}
+
+function showLine() {
+  shakeDialogue();
+  const s = SCENES[currentScene];
+  const line = s.lines[currentLine];
+  typeText(line, () => showContinueOrChoices());
+}
+
+function setBtnAction(btn, action) {
+  if (!btn) return;
+  let locked = false;
+  const run = function(e) {
+    if (e && e.type === 'touchend') e.preventDefault();
+    if (locked) return;
+    locked = true;
+    setTimeout(function() { locked = false; }, 350);
+    action(e);
+  };
+  btn.onclick = run;
+  btn.ontouchend = run;
+}
+
+function showContinueOrChoices() {
+  const s = SCENES[currentScene];
+  const isLastLine = currentLine >= s.lines.length - 1;
+
+  if (!isLastLine) {
+    continueBtn.textContent = 'Devam Et →';
+    continueBtn.classList.add('show');
+    setBtnAction(continueBtn, function() {
+      continueBtn.classList.remove('show');
+      currentLine++;
+      showLine();
+    });
+  } else if (s.choices) {
+    continueBtn.classList.remove('show');
+    s.choices.forEach(function(ch) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'choice-btn';
+      btn.textContent = ch.text;
+      setBtnAction(btn, function() {
+        choices.innerHTML = '';
+        typeText(ch.response, function() {
+          continueBtn.textContent = 'Sonraki Bölüm →';
+          continueBtn.classList.add('show');
+          setBtnAction(continueBtn, nextScene);
+        });
+      });
+      choices.appendChild(btn);
+    });
+  } else {
+    continueBtn.textContent = currentScene < SCENES.length - 1 ? 'Sonraki Bölüm →' : 'Bitir 💕';
+    continueBtn.classList.add('show');
+    setBtnAction(continueBtn, nextScene);
+  }
+}
+
+function nextScene() {
+  continueBtn.classList.remove('show');
+  if (currentScene < SCENES.length - 1) {
+    currentScene++;
+    loadScene(currentScene);
+  } else {
+    showEnd();
+  }
+}
+
+function showEnd() {
+  document.getElementById('app').style.display = 'none';
+  endScreen.classList.add('show');
+  spawnConfetti();
+  if (!window._confettiInterval) {
+    window._confettiInterval = setInterval(spawnConfetti, 6000);
+  }
+}
+
+// ── Start / Replay ──
+let storyStarted = false;
+
+function startStory(e) {
+  if (e) e.preventDefault();
+  if (storyStarted) return;
+  storyStarted = true;
+
+  const app = document.getElementById('app');
+  if (app) app.style.display = 'flex';
+
+  introScreen.classList.add('hide');
+  setTimeout(() => {
+    introScreen.style.display = 'none';
+    loadScene(0);
+  }, 500);
+}
+
+function bindTap(el, handler) {
+  if (!el) return;
+  el.addEventListener('click', handler);
+  el.addEventListener('touchend', function(e) {
+    e.preventDefault();
+    handler(e);
+  }, { passive: false });
+}
+
+const startBtn = document.getElementById('start-btn');
+bindTap(startBtn, startStory);
+
+document.getElementById('replay-btn').onclick = () => {
+  endScreen.classList.remove('show');
+  storyStarted = true;
+  document.getElementById('app').style.display = 'flex';
+  currentScene = 0;
+  if (window._confettiInterval) {
+    clearInterval(window._confettiInterval);
+    window._confettiInterval = null;
+  }
+  loadScene(0);
+};
+</script>
+</body>
+</html>

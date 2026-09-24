@@ -18,14 +18,35 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://busra-ramazan-engagement.vercel.app"),
   title: "Büşra & Ramazan · Nişan Davetiyesi",
   description:
     "Büşra ve Ramazan'ın nişan törenine davetlisiniz. 1 Kasım 2026, Pazar · 14:00–17:00 · Pembe Köşk, 15 Temmuz Mah. 148060 Nolu Cad. No:7 D:1, Şehitkamil / Gaziantep",
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: [{ url: "/apple-icon.png", type: "image/png" }],
+  },
   openGraph: {
     title: "Büşra & Ramazan · Nişan Davetiyesi",
     description: "1 Kasım 2026 · Pembe Köşk · Şehitkamil / Gaziantep",
     type: "website",
     locale: "tr_TR",
+    url: "https://busra-ramazan-engagement.vercel.app",
+    siteName: "Büşra & Ramazan",
+    images: [
+      {
+        url: "/images/og-share.png",
+        width: 1024,
+        height: 558,
+        alt: "Büşra & Ramazan",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Büşra & Ramazan · Nişan Davetiyesi",
+    description: "1 Kasım 2026 · Pembe Köşk · Şehitkamil / Gaziantep",
+    images: ["/images/og-share.png"],
   },
   appleWebApp: {
     capable: true,

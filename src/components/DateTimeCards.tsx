@@ -17,34 +17,35 @@ export function DateTimeCards() {
 
       <div className="grid grid-cols-2 gap-3 sm:gap-4">
         <FadeIn delay={0.08}>
-          <article className="glass-card flex min-h-[8.5rem] flex-col items-center justify-center rounded-2xl p-3.5 text-center shadow-xl sm:min-h-[9.5rem] sm:rounded-3xl sm:p-6">
-            <span className="mb-2 flex h-9 w-9 items-center justify-center rounded-xl bg-sage/10 text-sage sm:mb-3 sm:h-10 sm:w-10 sm:rounded-2xl">
+          <article className="glass-card flex min-h-[9rem] flex-col items-center justify-center rounded-2xl p-4 text-center shadow-xl sm:min-h-[10rem] sm:rounded-3xl sm:p-6">
+            <span className="mb-2.5 flex h-9 w-9 items-center justify-center rounded-xl bg-sage/10 text-sage sm:mb-3 sm:h-10 sm:w-10 sm:rounded-2xl">
               <CalendarDays className="h-4 w-4 sm:h-5 sm:w-5" strokeWidth={1.75} />
             </span>
-            <span className="text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-sage sm:text-[0.65rem] sm:tracking-[0.2em]">
+            <span className="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-sage">
               Tarih
             </span>
-            <p className="font-serif mt-1.5 text-base font-semibold leading-snug text-ink sm:mt-2 sm:text-2xl">
-              1 Kasım Pazar
+            <p className="mt-2 text-lg font-bold leading-tight text-ink sm:text-xl">
+              1 Kasım
             </p>
-            <p className="mt-0.5 text-xs text-ink-muted sm:mt-1 sm:text-sm">
-              2026
+            <p className="mt-0.5 text-sm font-semibold text-sage sm:text-base">
+              Pazar
             </p>
+            <p className="mt-1 text-xs font-medium text-ink-muted">2026</p>
           </article>
         </FadeIn>
 
         <FadeIn delay={0.16}>
-          <article className="glass-card flex min-h-[8.5rem] flex-col items-center justify-center rounded-2xl p-3.5 text-center shadow-xl sm:min-h-[9.5rem] sm:rounded-3xl sm:p-6">
-            <span className="mb-2 flex h-9 w-9 items-center justify-center rounded-xl bg-sage/10 text-sage sm:mb-3 sm:h-10 sm:w-10 sm:rounded-2xl">
+          <article className="glass-card flex min-h-[9rem] flex-col items-center justify-center rounded-2xl p-4 text-center shadow-xl sm:min-h-[10rem] sm:rounded-3xl sm:p-6">
+            <span className="mb-2.5 flex h-9 w-9 items-center justify-center rounded-xl bg-sage/10 text-sage sm:mb-3 sm:h-10 sm:w-10 sm:rounded-2xl">
               <Clock3 className="h-4 w-4 sm:h-5 sm:w-5" strokeWidth={1.75} />
             </span>
-            <span className="text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-sage sm:text-[0.65rem] sm:tracking-[0.2em]">
+            <span className="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-sage">
               Saat
             </span>
-            <p className="font-serif mt-1.5 text-base font-semibold leading-snug text-ink sm:mt-2 sm:text-2xl">
+            <p className="mt-2 text-lg font-bold leading-tight tabular-nums text-ink sm:text-xl">
               14:00 – 17:00
             </p>
-            <p className="mt-0.5 text-xs text-ink-muted sm:mt-1 sm:text-sm">
+            <p className="mt-1 text-xs font-medium text-ink-muted">
               Öğleden sonra
             </p>
           </article>

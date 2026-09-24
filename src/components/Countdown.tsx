@@ -75,14 +75,14 @@ export function Countdown() {
               key={key}
               className="flex min-h-[4.75rem] min-w-0 flex-col items-center justify-center rounded-xl border border-sage/10 bg-cream/80 px-0.5 py-2.5 sm:min-h-[6.5rem] sm:rounded-2xl sm:px-2 sm:py-3"
             >
-              <span className="font-serif text-countdown tabular-nums font-semibold leading-none text-sage">
+              <span className="text-countdown tabular-nums font-bold leading-none tracking-tight text-sage">
                 {timeLeft
                   ? key === "days"
                     ? timeLeft[key]
                     : pad(timeLeft[key])
                   : "—"}
               </span>
-              <span className="mt-1.5 text-[0.55rem] font-semibold uppercase tracking-[0.08em] text-ink-muted sm:mt-2 sm:text-[0.65rem] sm:tracking-[0.14em]">
+              <span className="mt-1.5 text-[0.55rem] font-bold uppercase tracking-[0.08em] text-ink-muted sm:mt-2 sm:text-[0.65rem] sm:tracking-[0.14em]">
                 <span className="sm:hidden">{short}</span>
                 <span className="hidden sm:inline">{label}</span>
               </span>

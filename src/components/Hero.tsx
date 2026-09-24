@@ -30,9 +30,9 @@ export function Hero() {
           Nişan Davetiyesi
         </span>
 
-        <h1 className="font-serif text-hero mt-5 font-semibold tracking-tight sm:mt-6">
+        <h1 className="font-serif text-hero mt-5 font-bold tracking-tight sm:mt-6">
           Büşra{" "}
-          <span className="inline-block font-normal italic text-cream/75">
+          <span className="inline-block font-normal italic text-cream/80">
             &
           </span>{" "}
           Ramazan
@@ -40,7 +40,7 @@ export function Hero() {
 
         <div className="mx-auto mt-5 h-px w-12 bg-cream/30 sm:mt-6 sm:w-16" aria-hidden />
 
-        <p className="mx-auto mt-5 max-w-[22rem] font-serif text-base italic leading-relaxed text-cream/90 sm:mt-6 sm:max-w-md sm:text-xl">
+        <p className="mx-auto mt-5 max-w-[22rem] font-serif text-[1.05rem] italic leading-relaxed text-cream/95 sm:mt-6 sm:max-w-md sm:text-xl">
           &ldquo;Bu mutlu günümüzde sizleri de aramızda görmekten onur
           duyarız.&rdquo;
         </p>

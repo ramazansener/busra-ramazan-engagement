@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     siteName: "Büşra & Ramazan",
     images: [
       {
-        url: "/images/og-share.png",
+        url: "/images/og-share.png?v=2",
         width: 1024,
         height: 558,
-        alt: "Büşra & Ramazan",
+        alt: "Büşra & Ramazan · Nişan Davetiyesi",
       },
     ],
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Büşra & Ramazan · Nişan Davetiyesi",
     description: "1 Kasım 2026 · Pembe Köşk · Şehitkamil / Gaziantep",
-    images: ["/images/og-share.png"],
+    images: ["/images/og-share.png?v=2"],
   },
   appleWebApp: {
     capable: true,

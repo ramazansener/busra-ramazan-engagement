@@ -73,7 +73,7 @@ export function Countdown() {
           {UNITS.map(({ key, label, short }) => (
             <div
               key={key}
-              className="flex min-h-[4.75rem] min-w-0 flex-col items-center justify-center rounded-xl border border-sage/10 bg-cream/80 px-0.5 py-2.5 sm:min-h-[6.5rem] sm:rounded-2xl sm:px-2 sm:py-3"
+              className="flex min-h-[4.25rem] min-w-0 flex-col items-center justify-center rounded-xl border border-sage/10 bg-cream/80 px-0.5 py-2 sm:min-h-[5.5rem] sm:rounded-2xl sm:px-2 sm:py-3"
             >
               <span className="text-countdown tabular-nums font-bold leading-none tracking-tight text-sage">
                 {timeLeft

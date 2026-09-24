@@ -70,9 +70,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="tr"
-      className={`${playfair.variable} ${dmSans.variable} h-full antialiased`}
+      className={`${playfair.variable} ${dmSans.variable} antialiased`}
     >
-      <body className="min-h-dvh min-h-svh overflow-x-hidden bg-atmosphere font-sans text-ink">
+      <body className="overflow-x-hidden bg-atmosphere font-sans text-ink">
         {children}
       </body>
     </html>

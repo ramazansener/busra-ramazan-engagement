@@ -5,15 +5,15 @@ import { LocationSection } from "@/components/LocationSection";
 
 export default function Home() {
   return (
-    <main className="relative mx-auto flex w-full max-w-lg flex-col px-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] pt-[max(1.25rem,env(safe-area-inset-top))] pb-[max(1.5rem,env(safe-area-inset-bottom))] sm:max-w-xl sm:px-6 sm:pt-10 sm:pb-10">
-      <div className="flex flex-1 flex-col gap-6 sm:gap-10">
+    <main className="relative mx-auto w-full max-w-lg px-4 pt-5 pb-6 sm:max-w-xl sm:px-6 sm:pt-8 sm:pb-8">
+      <div className="flex flex-col gap-5 sm:gap-7">
         <Hero />
         <DateTimeCards />
         <Countdown />
         <LocationSection />
       </div>
 
-      <footer className="mt-10 pb-2 text-center sm:mt-12 sm:pb-4">
+      <footer className="mt-6 text-center sm:mt-8">
         <p className="font-serif text-base text-sage sm:text-lg">
           Büşra & Ramazan
         </p>

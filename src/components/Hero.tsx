@@ -5,7 +5,7 @@ import { Heart } from "lucide-react";
 
 export function Hero() {
   return (
-    <header className="relative overflow-hidden rounded-3xl bg-sage px-5 py-10 text-center text-cream shadow-xl sm:rounded-[1.75rem] sm:px-10 sm:py-16">
+    <header className="relative overflow-hidden rounded-3xl bg-sage px-5 py-8 text-center text-cream shadow-xl sm:rounded-[1.75rem] sm:px-10 sm:py-12">
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.07]"
         style={{
